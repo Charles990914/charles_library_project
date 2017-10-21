@@ -1,0 +1,685 @@
+<!DOCTYPE HTML>
+<!--
+	Editorial by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+<head>
+    <title>Library Project</title>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
+    <!--[if lte IE 8]>
+    <script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+    <link rel="stylesheet" href="assets/css/main.css"/>
+    <!--[if lte IE 9]>
+    <link rel="stylesheet" href="assets/css/ie9.css"/><![endif]-->
+    <!--[if lte IE 8]>
+    <link rel="stylesheet" href="assets/css/ie8.css"/><![endif]-->
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+</head>
+<body>
+
+<!-- Wrapper -->
+<div id="wrapper">
+
+    <!-- Main -->
+    <div id="main">
+        <div class="inner">
+
+            <!-- Header -->
+            <header id="header">
+                <a href="index.html" class="logo"><strong>Big Data Solution </strong> by Charles</a>
+                <ul class="icons">
+                    <li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a>
+                    </li>
+                    <li><a href="#" class="icon fa-facebook"><span class="label">Facebook</span></a>
+                    </li>
+                    <li><a href="#" class="icon fa-snapchat-ghost"><span
+                            class="label">Snapchat</span></a></li>
+                    <li><a href="#" class="icon fa-instagram"><span
+                            class="label">Instagram</span></a></li>
+                    <li><a href="#" class="icon fa-medium"><span class="label">Medium</span></a>
+                    </li>
+                </ul>
+            </header>
+
+            <!-- Banner -->
+            <section id="banner">
+                <div class="content">
+                    <header>
+                        <h1>A Library Project</h1>
+                        <p>Hi, I’m Charles</p>
+                    </header>
+                    <p style="font-size: 16px; color: #001F54">The reason I chose to explore solutions for my school
+                        library is that I
+                        sometimes could not find the seats and the library is
+                        not maximizing their resources. I would like to use my
+                        math-modeling ability to do a simulation for hom many
+                        students will come in in different periods of each day to find out the key problem.
+                        During the process of research I gained better understanding
+                        about Data Visualization, how to discover underlying patterns out of data
+                        , as well as how to organize our data story in a logical flow.
+                        Soon, with the finished analysis, I would propose a plan for the library to improve.
+
+                    </p>
+
+                </div>
+                <span class="image object">
+                                        <img src="images/WechatIMG82.jpeg" alt=""/>
+                                </span>
+            </section>
+
+            <!-- Section -->
+            <section>
+                <header class="major">
+                    <h1 style="margin-bottom: 10px">Timeline &ensp;<span style="font-size: 12px">(<-- Open Panel to select!)</span>
+                    </h1>
+
+                </header>
+                <h3>I divide the whole day into 12 time periods and calculate the library usage for each period.
+                    According to the true situation in my school, different students will have different period of free
+                    time each day. Also, not all students want to go to the library for study. Thus in the menu, you
+                    could
+                    select a certain period to check the usage and also you are able to control how many people would
+                    like to go to
+                    the library, especially to check how to mix three grades of students to get the library's maximun
+                    usage.</h3>
+                <div class="features">
+                    <div id="graphTimeline" style="width:100%; height:650px;"></div>
+                </div>
+                <div class="box">
+                    <h3 id="result"></h3>
+                </div>
+            </section>
+
+            <!-- Section -->
+            <section>
+                <header class="major">
+                    <h1 style="margin-bottom: 10px">Table Graph</h1>
+                </header>
+                <h3>The basic principle of my simulation is that each student would not choose the seat between or in
+                    front of another student
+                    who he is not familiar with. Only friends can sit together. The situation hugely affects the library
+                    usage.
+                    Therefore, I want to simulate the situation and find out the way to improve.</h3>
+                <div class="features">
+                    <div id="graphTable" style="width:100%; height:650px;"></div>
+                </div>
+            </section>
+
+            <section>
+                <header class="major">
+                    <h1 style="margin-bottom: 10px">Future Proposal</h1>
+                </header>
+                <h3>1. Use the round tables instead of rectangular tables(the data simulation is still in
+                    progress...)</h3>
+                <h3>2. Add some co-working spaces.</h3>
+            </section>
+
+            <section>
+                <header class="major">
+                    <h1 style="margin-bottom: 10px">How do I get Data?</h1>
+                </header>
+                <h3> I got the whole student namelist and each class schedule from the principle of our school. The
+                    original data
+                    was excel format and only contains the basic information. I added some attributes including age,
+                    sex, grade into data and
+                    convert the document to csv format. Then i calculate the friend circle and free time for each
+                    student according to the
+                    original data in order to simulate the situation.</h3>
+            </section>
+        </div>
+    </div>
+
+    <!-- Sidebar -->
+    <div id="sidebar">
+        <div class="inner">
+
+            <!-- Menu -->
+            <nav id="menu">
+                <header class="major">
+                    <h2>Control Panel</h2>
+                </header>
+                <ul>
+                    <fieldset>
+                        <label>Select a DAY:</label>
+                        <input type="radio" name="radio-1" id="Monday" class="week">
+                        <label for="Monday">Monday</label>
+                        <input type="radio" name="radio-1" id="Tuesday" class="week">
+                        <label for="Tuesday">Tuesday</label>
+                        <input type="radio" name="radio-1" id="Wednesday" class="week">
+                        <label for="Wednesday">Wednesday</label>
+                        <input type="radio" name="radio-1" id="Thursday" class="week">
+                        <label for="Thursday">Thursday</label>
+                        <input type="radio" name="radio-1" id="Friday" class="week">
+                        <label for="Friday">Friday</label>
+                    </fieldset>
+                    <br>
+                    <label>Select a Time:</label>
+                    <select name="effects" id="effectTypes">
+                        <option value="0">7:50-8:30</option>
+                        <option value="1">8:40-9:20</option>
+                        <option value="2">9:30-10:10</option>
+                        <option value="3">10:30-11:10</option>
+                        <option value="4">11:20-12:00</option>
+                        <option value="5">12:00-13:10</option>
+                        <option value="6">13:15-13:55</option>
+                        <option value="7">14:10-14:50</option>
+                        <option value="8">15:00-15:40</option>
+                        <option value="9">15:50-16:30</option>
+                        <option value="10">16:30-18:00</option>
+                        <option value="11">18:00-21:00</option>
+                    </select>
+                    <br>
+                    <p>
+                        <label for="amount1">Maximum avalable students for grade 10:</label>
+                        <input type="text" id="amount1" readonly
+                               style="border:0; color:#f6931f; font-weight:bold;">
+                    </p>
+                    <div id="slider-range-min1"></div>
+                    <br>
+
+                    <p>
+                        <label for="amount2">Maximum avalable students for grade 11:</label>
+                        <input type="text" id="amount2" readonly style="border:0; color:#f6931f; font-weight:bold;">
+                    </p>
+                    <div id="slider-range-min2"></div>
+                    <br>
+
+                    <p>
+                        <label for="amount3">Maximum avalable students for grade 12:</label>
+                        <input type="text" id="amount3" readonly style="border:0; color:#f6931f; font-weight:bold;">
+                    </p>
+                    <div id="slider-range-min3"></div>
+                    <br>
+                </ul>
+            </nav>
+
+            <!-- Section -->
+            <!--<section>-->
+            <!--<header class="major">-->
+            <!--<h2>Get in touch</h2>-->
+            <!--</header>-->
+            <!--<p>Sed varius enim lorem ullamcorper dolore aliquam aenean ornare velit lacus, ac varius-->
+            <!--enim lorem ullamcorper dolore. Proin sed aliquam facilisis ante interdum. Sed-->
+            <!--nulla amet lorem feugiat tempus aliquam.</p>-->
+            <!--<ul class="contact">-->
+            <!--<li class="fa-envelope-o"><a href="#">information@untitled.tld</a></li>-->
+            <!--<li class="fa-phone">(000) 000-0000</li>-->
+            <!--<li class="fa-home">1234 Somewhere Road #8254<br/>-->
+            <!--Nashville, TN 00000-0000-->
+            <!--</li>-->
+            <!--</ul>-->
+            <!--</section>-->
+
+            <!-- Footer -->
+        </div>
+    </div>
+
+</div>
+
+<!-- Scripts -->
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<!--<script src="assets/js/jquery.min.js"></script>-->
+<script src="assets/js/skel.min.js"></script>
+<script src="assets/js/util.js"></script>
+<!--[if lte IE 8]>
+<script src="assets/js/ie/respond.min.js"></script><![endif]-->
+<script src="assets/js/main.js"></script>
+
+<script src="libs/d3.v2.min.js"></script>
+<script src="libs/echarts.min.js"></script>
+<script src="js/algoithm.js"></script>
+<script src="js/datafile.js"></script>
+
+<script>
+
+    var grade1 = new Array();               // 保存该年级学生进馆比例
+    var grade2 = new Array();
+    var grade3 = new Array();
+    var grade1Num = new Array();
+    var grade2Num = new Array();
+    var grade3Num = new Array();
+
+    var freelist = new Array();
+    var selectedIndex;
+    var selectedDay;
+    var selectedTime;
+
+    // 基于准备好的dom，初始化echarts实例
+    var myChart = echarts.init(document.getElementById('graphTimeline'));
+    var option = {
+        tooltip: {
+            trigger: 'axis',
+            axisPointer: {                  // 坐标轴指示器，坐标轴触发有效
+                type: 'shadow'          // 默认为直线，可选为：'line' | 'shadow'
+            }
+        },
+        legend: {
+            data: ['grade 10', 'grade 11', 'grade 12']
+        },
+        grid: {
+            left: '3%',
+            right: '4%',
+            bottom: '3%',
+            containLabel: true
+        },
+        xAxis: {
+            type: 'category',
+            data: timelist,
+            name: "time",
+            nameTextStyle: {
+                color: '#3d4449',
+                fontSize: 16
+            },
+            axisTick: {interval: 0},
+            axisLabel: {interval: 0}
+        },
+        yAxis: {
+            type: 'value',
+            min: 0,
+            max: 100,
+            name: "usage percentage",
+            nameTextStyle: {
+                color: '#3d4449',
+                fontSize: 16
+            },
+            axisLabel: {
+                formatter: '{value} %'
+            }
+        },
+        series: [
+            {
+                name: 'grade 10',
+                type: 'bar',
+                stack: '总量',
+                label: {
+                    normal: {
+                        show: true,
+                        position: 'inside',
+                        formatter: function (a) {
+                            if (a.data == 0) {
+                                return "";
+                            }
+                            else {
+                                return a.data + " %"
+                            }
+                        }
+                    }
+                },
+                itemStyle: {
+                    normal: {
+                        color: "#ff572d"
+                    }
+                },
+                data: grade1
+            },
+            {
+                name: 'grade 11',
+                type: 'bar',
+                stack: '总量',
+                label: {
+                    normal: {
+                        show: true,
+                        position: 'inside',
+                        formatter: function (a) {
+                            if (a.data == 0) {
+                                return "";
+                            }
+                            else {
+                                return a.data + " %"
+                            }
+                        }
+                    }
+                },
+                itemStyle: {
+                    normal: {
+                        color: "#4880ff"
+                    }
+                },
+                data: grade2
+            },
+            {
+                name: 'grade 12',
+                type: 'bar',
+                stack: '总量',
+                label: {
+                    normal: {
+                        show: true,
+                        position: 'inside',
+                        formatter: function (a) {
+                            if (a.data == 0) {
+                                return "";
+                            }
+                            else {
+                                return a.data + " %"
+                            }
+                        }
+                    }
+                },
+                itemStyle: {
+                    normal: {
+                        color: "#4eff9d"
+                    }
+                },
+                data: grade3
+            }
+
+        ]
+    };
+
+    myChart.setOption(option);
+
+    /*   myChart.on('click', function (params) {
+
+               $("#slider-range-min1").slider({
+                       value: grade1Num[params.dataIndex],
+                       max: grade1Num[params.dataIndex]
+               });
+               $("#amount1").val(grade1Num[params.dataIndex]);
+
+
+               $("#slider-range-min2").slider({
+                       value: grade2Num[params.dataIndex],
+                       max: grade2Num[params.dataIndex]
+               });
+               $("#amount2").val(grade2Num[params.dataIndex]);
+
+               $("#slider-range-min3").slider({
+                       value: grade3Num[params.dataIndex],
+                       max: grade3Num[params.dataIndex]
+               });
+               $("#amount3").val(grade3Num[params.dataIndex]);
+
+               // 计算freelist
+               selectedIndex = params.dataIndex;
+               freelist = findFreeStudent(sss.toString(), params.name);
+               updateTable();
+       }); */
+
+    function updateTable() {
+
+        //console.log($("#slider-range-min1").slider("value"));
+        var arr = arrangeSeat(freelist, $("#slider-range-min1").slider("value"), $("#slider-range-min2").slider("value"), $("#slider-range-min3").slider("value"));
+        option.series[0].data[selectedIndex] = changeToPercantage(arr[1]);
+        option.series[1].data[selectedIndex] = changeToPercantage(arr[2]);
+        option.series[2].data[selectedIndex] = changeToPercantage(arr[3]);
+        myChart.setOption(option);
+        // 更新座位表
+        myChart123.setOption(option123);
+
+
+        //calculate results
+        var abcdefg = parseFloat(changeToPercantage(arr[1])) + parseFloat(changeToPercantage(arr[2])) + parseFloat(changeToPercantage(arr[3]));
+        var abcdefgh = 144 - arr[1] - arr[2] - arr[3];
+        var totalpeoplenotgetin = $("#slider-range-min1").slider("value") + $("#slider-range-min2").slider("value") + $("#slider-range-min3").slider("value") - abcdefgh;
+        if (totalpeoplenotgetin < 0) {
+            totalpeoplenotgetin = 0;
+        }
+        var str = "For " + selectedDay + " at " + selectedTime + " the library's usage rate is "
+            + abcdefg + "%. There are " + abcdefgh + " seats left in the library and " + totalpeoplenotgetin + " students do not get the seats in the library."
+        $("#result").html(str)
+        //pickSeat();
+    }
+
+
+    function initializeSeat() {
+//        for (var i = 0; i < data123.length; i++) {
+//            dataSeat.push([data123[i][0] - 4, data123[i][1] - 5, i + 1, "bl", 0, 0]);
+//            dataSeat.push([data123[i][0] - 4, data123[i][1] + 5, i + 1, "tl", 0, 0]);
+//            dataSeat.push([data123[i][0] + 4, data123[i][1] + 5, i + 1, "tr", 0, 0]);
+//            dataSeat.push([data123[i][0] + 4, data123[i][1] - 5, i + 1, "br", 0, 0]);
+//        }
+
+        for (var i = 0; i < data123.length; i++) {
+            dataSeat.push({value:[data123[i][0] - 4, data123[i][1] - 5, i + 1, "bl", 0, 0],symbol:'rect'});
+            dataSeat.push({value:[data123[i][0] - 4, data123[i][1] + 5, i + 1, "tl", 0, 0],symbol:'rect'});
+            dataSeat.push({value:[data123[i][0] + 4, data123[i][1] + 5, i + 1, "tr", 0, 0],symbol:'rect'});
+            dataSeat.push({value:[data123[i][0] + 4, data123[i][1] - 5, i + 1, "br", 0, 0],symbol:'rect'});
+        }
+    }
+
+    // --------------------------------------------------------------------
+    //  座位表
+    // --------------------------------------------------------------------
+
+    // 基于准备好的dom，初始化echarts实例
+    var myChart123 = echarts.init(document.getElementById('graphTable'));
+    var data123 = [
+        [10, 10, '1'], [10, 25, '2'], [10, 40, '3'], [10, 55, '4'], [10, 70, '5'], [10, 85, '6'],
+        [25, 10, '7'], [25, 25, '8'], [25, 40, '9'], [25, 55, '10'], [25, 70, '11'], [25, 85, '12'],
+        [40, 10, '13'], [40, 25, '14'], [40, 40, '15'], [40, 55, '16'], [40, 70, '17'], [40, 85, '18'],
+        [60, 10, '19'], [60, 25, '20'], [60, 40, '21'], [60, 55, '22'], [60, 70, '23'], [60, 85, '24'],
+        [75, 10, '25'], [75, 25, '26'], [75, 40, '27'], [75, 55, '28'], [75, 70, '29'], [75, 85, '30'],
+        [90, 10, '31'], [90, 25, '32'], [90, 40, '33'], [90, 55, '34'], [90, 70, '35'], [90, 85, '36'],
+    ];
+
+    var dataSeat = new Array();
+    //        var dataSeatStudent = new Array();
+    initializeSeat();
+    //        updateSeatStudent();
+    var option123 = {
+        title: {
+            text: ''
+        },
+        legend: {
+            right: 10,
+            data: ['桌子', '椅子']
+        },
+        xAxis: {
+            splitLine: {
+                lineStyle: {
+                    type: 'dashed'
+                },
+            },
+            interval: 10
+        },
+        yAxis: {
+            splitLine: {
+                lineStyle: {
+                    type: 'dashed'
+                }
+            },
+            interval: 10
+        },
+        series: [{
+            name: 'Table',
+            data: data123,
+            type: 'scatter',
+            symbol: 'rect',
+            symbolSize: [80, 40],
+            label: {
+                emphasis: {
+                    show: true,
+                    formatter: function (param) {
+                        return param.data[3];
+                    },
+                    position: 'top'
+                }
+            },
+            itemStyle: {
+                normal: {
+                    shadowBlur: 10,
+                    shadowColor: 'rgba(120, 36, 50, 0.5)',
+                    shadowOffsetY: 5,
+                    color: new echarts.graphic.RadialGradient(0.4, 0.3, 1, [{
+                        offset: 0,
+                        color: 'rgb(172, 138, 18)'
+                    }, {
+                        offset: 1,
+                        color: 'rgb(204, 46, 72)'
+                    }])
+                }
+            }
+        }, {
+            name: 'Seat',
+            data: dataSeat,
+            type: 'scatter',
+            symbol: 'circle',
+            symbolSize: [10, 10],
+            label: {
+                emphasis: {
+                    show: true,
+                    formatter: function (param) {
+                        return param.data[3];
+                    },
+                    position: 'top'
+                }
+            },
+            itemStyle: {
+                normal: {
+                    shadowBlur: 10,
+                    shadowColor: 'rgba(25, 100, 150, 0.5)',
+                    shadowOffsetY: 5,
+                    color: function (param) {
+
+
+                        if (param.data.value[4] == 0) {
+                            return 'rgba(0,0,0,0)';
+                        }
+                        else if (param.data.value[4].substr(3, 2) == "16") {
+                            return 'rgb(0,255,0)';
+                        }
+                        else if (param.data.value[4].substr(3, 2) == "17") {
+                            return 'rgb(0,0,255)';
+                        }
+                        else if (param.data.value[4].substr(3, 2) == "18") {
+                            return 'rgb(255,0,0)';
+                        }
+                    },
+//                    borderColor: '#000',
+//                    borderWidth: 1
+                }
+            },
+            tooltip: {
+                fomatter: function (param) {
+                    return param.data[4] + '-' + param.data[5];
+                }
+            }
+        }]
+    };
+    myChart123.setOption(option123);
+
+
+    // --------------------------------------------------------------------
+    //  UI
+    // --------------------------------------------------------------------
+
+    // Checkbox
+    var sss = 0;
+    $(function () {
+        //$(".week").checkboxradio();
+        //$("fieldset").controlgroup();
+        $(".week").on("change", handleToggle);
+
+        function handleToggle(e) {
+            var target = $(e.target);
+            if (target[0].id == "Monday") {
+                sss = 1;
+                selectedDay = "Monday";
+            }
+            else if (target[0].id == "Tuesday") {
+                sss = 2;
+                selectedDay = "Tuesday"
+            }
+            else if (target[0].id == "Wednesday") {
+                sss = 3;
+                selectedDay = "Wednesday"
+            }
+            else if (target[0].id == "Thursday") {
+                sss = 4;
+                selectedDay = "Thursday"
+            }
+            else if (target[0].id == "Friday") {
+                sss = 5;
+                selectedDay = "Friday"
+            }
+            main();
+            myChart.setOption(option);
+        }
+    });
+
+    $(function () {
+        $("#effectTypes").on("change", function () {
+            selectedTime = $("#effectTypes").find("option:selected").text();
+            var dex = $("#effectTypes").val();
+            console.log(dex);
+
+            $("#slider-range-min1").slider({
+                value: grade1Num[dex],
+                max: grade1Num[dex]
+            });
+            $("#amount1").val(grade1Num[dex]);
+
+
+            $("#slider-range-min2").slider({
+                value: grade2Num[dex],
+                max: grade2Num[dex]
+            });
+            $("#amount2").val(grade2Num[dex]);
+
+            $("#slider-range-min3").slider({
+                value: grade3Num[dex],
+                max: grade3Num[dex]
+            });
+            $("#amount3").val(grade3Num[dex]);
+
+            // 计算freelist
+            selectedIndex = dex;
+            freelist = findFreeStudent(sss.toString(), $("#effectTypes").find("option:selected").text());
+            updateTable();
+        });
+    })
+
+    // 初始化Slider
+    $(function () {
+        $("#slider-range-min1").slider({
+            range: "min",
+            value: 0,
+            min: 0,
+            max: 0,
+            slide: function (event, ui) {
+                $("#amount1").val(ui.value);
+            },
+            stop: function (event, ui) {
+                updateTable();
+            }
+        });
+        $("#amount").val($("#slider-range-min").slider("value"));
+
+        $("#slider-range-min2").slider({
+            range: "min",
+            value: 0,
+            min: 0,
+            max: 0,
+            slide: function (event, ui) {
+                $("#amount2").val(ui.value);
+            },
+            stop: function (event, ui) {
+                updateTable();
+            }
+        });
+        $("#amount").val($("#slider-range-min").slider("value"));
+
+        $("#slider-range-min3").slider({
+            range: "min",
+            value: 0,
+            min: 0,
+            max: 0,
+            slide: function (event, ui) {
+                $("#amount3").val(ui.value);
+            },
+            stop: function (event, ui) {
+                updateTable();
+            }
+        });
+        $("#amount").val($("#slider-range-min").slider("value"));
+    });
+
+
+</script>
+
+</body>
+</html>
